@@ -280,7 +280,7 @@ h3 { font-size: 1.2rem; margin-bottom: 8px; }
 
 .producto-card img { height: 260px; object-fit: cover; }
 
-.producto-info { padding: 22px; display: flex; flex-direction: column; gap: 6px; }
+.producto-info { padding: 22px; display: flex; flex-direction: column; gap: 6px; color: var(--color-text); }
 
 .producto-tipo {
   text-transform: uppercase;
