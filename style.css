@@ -67,7 +67,9 @@ h3 { font-size: 1.2rem; margin-bottom: 8px; }
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.95rem;
+  font-family: inherit;
   text-align: center;
+  cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   border: 2px solid transparent;
 }
@@ -391,6 +393,48 @@ h3 { font-size: 1.2rem; margin-bottom: 8px; }
   transition: transform 0.15s ease;
 }
 .whatsapp-float:hover { transform: scale(1.08); }
+
+/* ---------- Modal selección de ciudad ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 21, 15, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  padding: 24px;
+}
+.modal-overlay[hidden] { display: none; }
+
+.modal-region {
+  position: relative;
+  background: var(--color-cream);
+  color: var(--color-text);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(20,21,15,0.3);
+}
+.modal-region h3 { color: var(--color-green-dark); margin-bottom: 8px; }
+.modal-region p { color: var(--color-muted); margin-bottom: 20px; }
+
+.modal-opciones { display: flex; flex-direction: column; gap: 12px; }
+
+.modal-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+.modal-cerrar:hover { color: var(--color-text); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
