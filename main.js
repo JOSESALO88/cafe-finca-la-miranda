@@ -1,0 +1,18 @@
+// Menú móvil
+const navToggle = document.getElementById('navToggle');
+const siteNav = document.getElementById('siteNav');
+
+navToggle.addEventListener('click', () => {
+  const isOpen = siteNav.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', isOpen);
+});
+
+siteNav.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    siteNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Año actual en el footer
+document.getElementById('year').textContent = new Date().getFullYear();
