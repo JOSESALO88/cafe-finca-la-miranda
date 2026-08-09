@@ -439,6 +439,52 @@ h3 { font-size: 1.2rem; margin-bottom: 8px; }
 }
 .modal-cerrar:hover { color: var(--color-text); }
 
+/* ---------- Fondo fotográfico por sección ---------- */
+.section-photo {
+  position: relative;
+  overflow: hidden;
+}
+.section-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.section-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,12,6,0.78) 0%, rgba(10,12,6,0.6) 45%, rgba(10,12,6,0.88) 100%);
+  z-index: 0;
+}
+.section-photo > .container { position: relative; z-index: 1; }
+
+.section-photo-ficha::before { background-image: url('galeria-cerezas-verdes.jpg'); }
+
+.section-photo-historia::before { background-image: url('galeria-cerezas-rojas.jpg'); }
+.section-photo-historia { color: var(--color-cream); }
+.section-photo-historia .section-eyebrow { color: var(--color-green); }
+.section-photo-historia h2 { color: #fff; }
+.section-photo-historia .historia-text p { color: var(--color-cream); }
+.section-photo-historia .historia-quote { color: #bfe9cc; border-left-color: var(--color-green); }
+.section-photo-historia .historia-lugar { color: rgba(246,241,230,0.75); }
+.section-photo-historia .historia-img img { box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+
+.section-photo-catalogo::before { background-image: url('producto-generico.jpg'); }
+.section-photo-catalogo { color: #fff; }
+.section-photo-catalogo h2 { color: #fff; }
+.section-photo-catalogo .section-eyebrow { color: var(--color-green); }
+.section-photo-catalogo .catalogo-sub { color: rgba(246,241,230,0.85); }
+
+.section-photo-preparacion::before { background-image: url('historia-secado-finca.jpg'); }
+
+.section-photo-cta::before { background-image: url('galeria-costal.jpg'); }
+.section-photo-cta::after {
+  background: linear-gradient(180deg, rgba(20,99,52,0.82) 0%, rgba(10,12,6,0.55) 45%, rgba(20,99,52,0.88) 100%);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .historia-grid { grid-template-columns: 1fr; }
